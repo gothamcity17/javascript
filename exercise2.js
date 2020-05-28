@@ -60,6 +60,19 @@ console.log(divide(multiply(add())))
 // undefined
 // ""
 
+console.log("20; truthy; because it has a number value, and happens to be greater than zero")
+console.log("0; falsy; because it does not have a value")
+console.log("'zero'; truthy; because it is actually a string and has a value or property")
+console.log("const zero = 20; truthy; because the word zero has a value, and happens to be greater than zero")
+console.log("null; falsy; because it does not have a value")
+console.log("'0'; truthy; because it is actually a string and has a value or property")
+console.log("!''; falsy; because the string does not have any sort of value, and is empty")
+console.log("{}; truthy; because it has a structural value as an object, albiet it may being empty")
+console.log("() => {console.log('hello TEKcamp!'); truthy; because it has an evident value")
+console.log("125; truthy; becauase it has a number value, and happens to be greater than zero")
+console.log("undefined; falsy; because it does not have a value, as nothing is assigned to it")
+console.log("''; falsy; because the string does not have any sort of value, and is empty")
+
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:

@@ -88,10 +88,24 @@ Reverse_Number(MyNumber);
 
 //your code...
 
+function my_Car()
+{
+    var info_Car =
+    {
+        make: "Audi", 
+        model: "A4", 
+        year: 2014, 
+        color: "Blue",
+        learn: function()
+        {
+            return console.log(this.year + ' ' + this.make + ' ' + this.model + ' ' + this.color);
+        },
+    }
+    info_Car.learn();
 
+}
 
-
-
+my_Car();
 
 /************************************************************* */
 // Problem 6:
@@ -147,7 +161,6 @@ function NumsArray()
 }
 
 NumsArray()
-
 
 // Problem 9:
 const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {school : 'TEKcamp'} ];

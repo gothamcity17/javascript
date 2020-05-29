@@ -123,7 +123,22 @@ ComplementaryStrand()
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
+const truthys = numbers.filter(el => el);
+const primitives = truthys.filter(n => typeof n != 'object');
+const noBools = primitives.filter(p => typeof p != 'boolean');
+console.log(noBools)
 
+const numStrings = ["zero","one","two","three"];
+const numWithStrings = noBools.map(nb => numStrings.includes(nb) ? numStrings.indexOf(nb) : nb);
+console.log(numWithStrings);
+
+const nums = numWithStrings.filter(n => typeof x != 'string');
+console.log(nums);
+
+console.log(Math.max(...nums));
+
+
+/* Old work
 function maxNumber(numbers)
 {
     var Array1 = numbers.map (x => 
@@ -147,6 +162,8 @@ function maxNumber(numbers)
 }
 
 maxNumber()
+*/
+
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 

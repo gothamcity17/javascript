@@ -175,9 +175,6 @@ function sortNums(numbers,desc=false)
 
 sortNums()
 
-
-
-
 /************************************************************* */
 // Problem 8:
 //add an example of at least 5 JavaScript data types to the given mapObj.  The key is the example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.

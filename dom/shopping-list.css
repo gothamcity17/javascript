@@ -1,0 +1,9 @@
+body{
+    margin-bottom: 10px;
+}
+
+#button {
+    font-size: 14px;
+    margin-left: 20px;
+    color: #666;
+}

@@ -16,7 +16,7 @@ var Celsius;
 function F_to_C() 
 {
     Celsius = (Temperature - 32) * (5 / 9)
-    console.log(' Celsius = ' + Celsius);
+    console.log('Celsius = ' + Celsius);
 }
 
 F_to_C();
@@ -26,7 +26,7 @@ F_to_C();
 function C_to_F()
 {
     Fahrenheit = (Celsius * (9/5)) + 32
-    console.log(' Fahrenheit = ' + Fahrenheit);
+    console.log('Fahrenheit = ' + Fahrenheit);
 }
 
 C_to_F();
@@ -41,8 +41,7 @@ var myAge = 22;
 
 function To_Vote() 
 {
-    myAge >= 18 ? 
-        console.log(' Yes, you are able to vote ') : console.log(' No, you are NOT able to vote ');
+    myAge >= 18 ? console.log('Yes') : console.log('No');
 }
 
 To_Vote(myAge);
@@ -53,17 +52,17 @@ To_Vote(myAge);
 
 //your code...
 
-var String = "The five boxing wizards jump quickly.";
+var MyString = "The five boxing wizards jump quickly.";
 
-function Split_String(String)
+function Split_String()
 {
-    var Array = String.split(' ');
-    console.log(Array);
-    var oldString = Array.join(' ');
-    console.log(oldString);
+    var MyArray = MyString.split(' ');
+    console.log(MyArray);
+    var OldString = MyArray.join(' ');
+    console.log(OldString);
 }
 
-Split_String(String);
+Split_String();
 
 /************************************************************* */
 // Problem 4:
@@ -71,16 +70,17 @@ Split_String(String);
 
 //your code...
 
-var MyNumber = 9721234567;
+var My_Number = 9876543212;
 
-function Reverse_Number(MyNumber) 
+function Reverse_Number() 
 {
-    var Number_String = MyNumber.toString();
+    var Number_String = My_Number.toString();
     var Number_Array = Number_String.split('');
-    console.log(Number_Array.reverse().join(''));
+    var Number_Final = Number_Array.reverse().join('');
+    console.log(Number_Final);
 }
 
-Reverse_Number(MyNumber);
+Reverse_Number();
 
 /************************************************************* */
 // Problem 5:
@@ -88,24 +88,22 @@ Reverse_Number(MyNumber);
 
 //your code...
 
-function my_Car()
+function My_Car()
 {
-    var info_Car =
-    {
-        make: "Audi", 
-        model: "A4", 
-        year: 2014, 
-        color: "Blue",
-        learn: function()
-        {
-            return console.log(this.year + ' ' + this.make + ' ' + this.model + ' ' + this.color);
-        },
-    }
-    info_Car.learn();
-
+    var Car_Info = 
+{
+    make: "Audi",
+    model: "A4",
+    year: 2014,
+    color: "Blue",
+}
+    console.log("Year = " + Car_Info.year);
+    console.log("Color = " + Car_Info.color);
+    console.log("Make = " + Car_Info.make);
+    console.log("Model = " + Car_Info.model);
 }
 
-my_Car();
+My_Car();
 
 /************************************************************* */
 // Problem 6:
@@ -118,8 +116,8 @@ function Odd_Or_Even()
 {
     for (var i = 0; i <= 15; i++)
     {
-        if (i % 2 == 0) console.log(i + ' ' + "= even");
-        else console.log(i + ' ' + "= odd");
+        if (i % 2 == 0) console.log(i + " = even");
+        else console.log(i + " = odd");
     }
 }
 

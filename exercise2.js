@@ -4,7 +4,8 @@
 // Problem 1: Refactor the for() loop to be a while loop.
 //
 
-for(let i=0; i<10; i++) {
+for(let i=0; i<10; i++)
+{
     console.log(" the value of i in the loop is : " + i);
 }
 
@@ -15,7 +16,7 @@ function Refactor()
     let i = 0;
     while (i < 10)
     {
-    console.log(' the value of i in the loop is : ' + i);
+    console.log('the value of i in the loop is : ' + i);
     i++;
     }
 }
@@ -29,15 +30,22 @@ Refactor();
 
 //your code...
 
-function add(){
+function add()
+{
     return 2 + 30
 }
 
-function multiply(product){
-    return product * 20
+console.log(add())
+
+function multiply(sum)
+{
+    return sum * 20
 }
 
-function divide(product){
+console.log(multiply(add()))
+
+function divide(product)
+{
     return product / Math.pow(10, 2)
 }
 
@@ -147,13 +155,13 @@ if (age > 65) console.log("retired"); else {
 }
 */
 
-const age = 10
+const age = 19
 
 function Ternary()
 {
-    age > 21 ? console.log(' adult ') : console.log(' minor ');
-    age > 13 && age < 19 ? console.log(' teen ') : console.log(' not a teenager ');
-    age > 65 ? console.log(' retired ') : console.log('still working...');
+    age >= 21 ? console.log(' adult ') : console.log(' minor ');
+    age >= 13 && age <= 19 ? console.log(' teen ') : console.log(' not a teenager ');
+    age >= 65 ? console.log(' retired ') : console.log(' still working... ');
 }
 
 Ternary();
@@ -182,15 +190,17 @@ function meExpanded()
         name: "Gowtham Katta", 
         age: "22", 
         gender: "Male", 
-        hobbies: ['Running', 'Hiking', 'Netflix'],
+        hobbies: ['Running ', ' Hiking ', ' Netflix'],
         profession: "Student",
         education: "Bachelor of Science and Arts in Biology",
         learn: function()
         {
-            return console.log("My name is " + this.name + " and I am " + this.age);
+            return console.log("My name is " + this.name + " and I am " + this.age + " years old.");
         },
-        myHobbies: function() {
-            return console.log("Some of my hobbies include " + this.hobbies)}
+        myHobbies: function()
+        {
+            return console.log("Some of my hobbies include " + this.hobbies + ".")
+        }
     }
     me.learn();
     me.myHobbies();
@@ -213,16 +223,16 @@ function phoneExpanded()
         software: "iOS 11",
         storage: "64 GB",
         features: "water reistance up to 30 feet",
-        learn: function()
+        aboutPhone: function()
         {
-            return console.log("I have an " + this.type + this.model);
+            return console.log("I have an " + this.type + " " + this.model + ".");
         },
         myFeatures: function()
         {
-            return console.log("One feature is that it is " + this.features)
+            return console.log("One feature about my Phone is that it's " + this.features + ".")
         }
     }
-    phone.learn();
+    phone.aboutPhone();
     phone.myFeatures();
 }
 
@@ -236,9 +246,9 @@ phoneExpanded();
 function Data()
 {
 
-    console.log("Booleans are my first favorite because they super simple, like if you just wanted to know if an expression is true.");
-    console.log("Numbers are my second favorite because I've always had fun playing around with them.");
-    console.log("Strings are my third favorite because like booleans they are simple, but also can be used to store or manipulate text.");
+    console.log("Booleans are my first favorite because I appreciate the simple logic to determine if an expression is true or false.");
+    console.log("Numbers are my second favorite because it is fun plugging and returning the numbers in order to obtain a certain value.");
+    console.log("Strings are my third favorite because you are able put almost anything inside a string and able to manipulate or store it to your advantage.");
 }
 
 Data();

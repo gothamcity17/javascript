@@ -186,7 +186,13 @@ Hungry()
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
-const operations = ['7 + 8', '24 - 6', '8 * 3', '42 / 7'];
-function doMath() {};
 
+const operations = ['4 + 3', '4 - 3', '4 * 3', '4 / 3'];
 
+function doMath()
+{
+    var generator = operations[Math.floor(Math.random() * operations.length)]
+    console.log(generator)
+}
+
+doMath()

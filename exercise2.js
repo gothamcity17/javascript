@@ -32,21 +32,21 @@ Refactor();
 
 function add()
 {
-    return 2 + 30
+    return (2 + 30)
 }
 
 console.log(add())
 
 function multiply(sum)
 {
-    return sum * 20
+    return (sum * 20)
 }
 
 console.log(multiply(add()))
 
 function divide(product)
 {
-    return product / Math.pow(10, 2)
+    return (product / Math.pow(10, 2))
 }
 
 console.log(divide(multiply(add())))
@@ -266,5 +266,20 @@ Data();
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
 
 //your code...
+
+function stockGain(basis, yrs)
+{
+    var message = ' is how much the stock has increased.';
+    function inner(yrs)
+    {
+        var r = 0.05;
+        console.log((basis * (yrs * r)) + message);
+        return (basis * (yrs * r));
+    }
+    return basis + inner(yrs);
+}
+
+var futureValue = stockGain(500, 5);
+console.log("Future value = " + futureValue);
 
 

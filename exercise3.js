@@ -123,15 +123,40 @@ ComplementaryStrand()
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
-function maxNumber(numbers) {
-    //your code...
+
+function maxNumber(numbers)
+{
+    var Array1 = numbers.map (x => 
+        {
+            switch(x)
+            {
+                case "one":
+                    return 1;
+                case "two":
+                    return 2;
+                case "3":
+                    return 3;
+                case "three":
+                    return 3;
+                default:
+                    return(Number(x));
+                    break;
+            }
+        })
+        console.log(Array1);
 }
+
+maxNumber()
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
-function sortNums(numbers,desc=false) {
-    //your code...
-};
+function sortNums(numbers,desc=false)
+{
+    Array1.sort(function(a, b){return b - a});
+    console.log(Array1)
+}
+
+sortNums()
 
 
 
@@ -192,3 +217,16 @@ performer(greeting);
 /************************************************************* */
 //Bonus assignment:
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
+
+//One new feature of ES6+ is template literals. Before, we had to use string concatenations. Now, we can use a string with placeholders, which allows us to get rid of all those concatenations.
+//As you can see, the literals are far more simpler to implement.
+
+//Before: 
+var name = 'Gotham'; 
+var message = 'Hi ' + name + ',';
+console.log(message)
+
+//After:
+var name = 'Gotham'; 
+var message = `Hi ${name},`;
+console.log(message)

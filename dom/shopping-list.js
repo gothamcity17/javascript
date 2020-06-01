@@ -3,7 +3,6 @@ var shop_input = document.getElementById("item");
 var shop_button = document.getElementsByTagName("button");
 
 shop_button[0].addEventListener("click", buttonAdd);
-
 function buttonAdd() 
 {
     var input_value = shop_input.value;
@@ -22,7 +21,6 @@ function buttonAdd()
     shop_ul[0].append(shop_li);
 
     second_button.addEventListener("click", buttonDelete);
-
     function buttonDelete()
     {
         this.parentElement.remove();

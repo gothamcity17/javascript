@@ -25,7 +25,7 @@ function buttonAdd()
 
     function buttonDelete()
     {
-        child.parentNode.removeChild(shop_li);
+        this.parentElement.remove();
     }
       shop_input.focus();
 }

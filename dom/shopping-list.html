@@ -4,18 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="shopping-list.css">
     <title>Shopping list example</title>
-    <style>
-      li {
-        margin-bottom: 10px;
-      }
 
-      li button {
-        font-size: 8px;
-        margin-left: 20px;
-        color: #666;
-      }
-    </style>
   </head>
   <body>
 
@@ -23,7 +14,9 @@
 
     <div>
       <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
+
+      <input type="text" value="item" id="item">
+      
       <button>Add item</button>
     </div>
 
@@ -31,8 +24,7 @@
 
     </ul>
 
-    <script>
-
-    </script>
+    <script src="shopping-list.js"> </script>
+  
   </body>
 </html>

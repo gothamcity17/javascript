@@ -4,15 +4,24 @@
 // Problem 1: Refactor the for() loop to be a while loop.
 //
 
-for(let i=0; i<10; i++) {
+for(let i=0; i<10; i++)
+{
     console.log(" the value of i in the loop is : " + i);
 }
 
-
 //your code...
 
+function Refactor()
+{
+    let i = 0;
+    while (i < 10)
+    {
+    console.log('the value of i in the loop is : ' + i);
+    i++;
+    }
+}
 
-
+Refactor();
 
 /************************************************************* */
 // Problem 2:
@@ -21,6 +30,26 @@ for(let i=0; i<10; i++) {
 
 //your code...
 
+function add()
+{
+    return (2 + 30)
+}
+
+console.log(add())
+
+function multiply(sum)
+{
+    return (sum * 20)
+}
+
+console.log(multiply(add()))
+
+function divide(product)
+{
+    return (product / Math.pow(10, 2))
+}
+
+console.log(divide(multiply(add())))
 
 /************************************************************* */
 //Problem 3:
@@ -39,13 +68,24 @@ for(let i=0; i<10; i++) {
 // undefined
 // ""
 
-
-
+console.log("20; truthy; because it has a number value, and happens to be greater than zero")
+console.log("0; falsy; because it does not have a value")
+console.log("'zero'; truthy; because it is actually a string and has a value or property")
+console.log("const zero = 20; truthy; because the word zero has a value, and happens to be greater than zero")
+console.log("null; falsy; because it does not have a value")
+console.log("'0'; truthy; because it is actually a string and has a value or property")
+console.log("!''; falsy; because the string does not have any sort of value, and is empty")
+console.log("{}; truthy; because it has a structural value as an object, albiet it may being empty")
+console.log("() => {console.log('hello TEKcamp!'); truthy; because it has an evident value")
+console.log("125; truthy; becauase it has a number value, and happens to be greater than zero")
+console.log("undefined; falsy; because it does not have a value, as nothing is assigned to it")
+console.log("''; falsy; because the string does not have any sort of value, and is empty")
 
 /************************************************************* */
 // Problem 4:
 // Refactor the following code using a switch statement:
 
+/*
 const day = "friday";
 
 if(day === "monday") {
@@ -61,11 +101,46 @@ if(day === "monday") {
 } else {
     console.log("It's a weekend!")
 }
+*/
 
+const day= "friday";
 
+function Switch()
+{
+    switch (day)
+    {
+        case "monday":
+            console.log("we got a long week ahead of us...");
+            break;
+
+        case "tuesday":
+            console.log("tuesday's are still better than mondays, but LONG way to go still");
+            break;
+
+        case "wednesday":
+            console.log("We are smack dab in the middle of the week");
+            break;
+
+        case "thursday":
+            console.log("Thursday night... the mood is right");
+            break;
+
+        case "friday":
+            console.log("TGIF.  Friday truly is the best day of the week!")
+            break;
+
+        default:
+            console.log("It's a weekend!")
+            break;
+    }
+}
+
+Switch();
 
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
+
+/*
 const age = 10;
 if (age > 21) console.log("adult"); else {
     console.log("minor");
@@ -78,7 +153,18 @@ if (age > 13 && age < 19) console.log('teen'); else {
 if (age > 65) console.log("retired"); else {
     console.log("still working...");
 }
+*/
 
+const age = 19
+
+function Ternary()
+{
+    age >= 21 ? console.log(' adult ') : console.log(' minor ');
+    age >= 13 && age <= 19 ? console.log(' teen ') : console.log(' not a teenager ');
+    age >= 65 ? console.log(' retired ') : console.log(' still working... ');
+}
+
+Ternary();
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents yourself.  set it to a variable that appropriately describes the object.  Include the following properties:
@@ -97,20 +183,75 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+function meExpanded()
+{
+    var me =
+    {
+        name: "Gowtham Katta", 
+        age: "22", 
+        gender: "Male", 
+        hobbies: ['Running ', ' Hiking ', ' Netflix'],
+        profession: "Student",
+        education: "Bachelor of Science and Arts in Biology",
+        learn: function()
+        {
+            return console.log("My name is " + this.name + " and I am " + this.age + " years old.");
+        },
+        myHobbies: function()
+        {
+            return console.log("Some of my hobbies include " + this.hobbies + ".")
+        }
+    }
+    me.learn();
+    me.myHobbies();
+}
+
+meExpanded();
 
 /************************************************************* */
-// Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
+// Problem 7: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...
 
+function phoneExpanded()
+{
+    var phone =
+    {
+        type: "iPhone", 
+        model: "X", 
+        year: "2017", 
+        software: "iOS 11",
+        storage: "64 GB",
+        features: "water reistance up to 30 feet",
+        aboutPhone: function()
+        {
+            return console.log("I have an " + this.type + " " + this.model + ".");
+        },
+        myFeatures: function()
+        {
+            return console.log("One feature about my Phone is that it's " + this.features + ".")
+        }
+    }
+    phone.aboutPhone();
+    phone.myFeatures();
+}
 
+phoneExpanded();
 
 /************************************************************* */
-//Problem 7: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
+//Problem 8: create a function that outputs your 3 favorite data types, with a message explaining why you like that data type.
 
 //your code...
 
+function Data()
+{
 
+    console.log("Booleans are my first favorite because I appreciate the simple logic to determine if an expression is true or false.");
+    console.log("Numbers are my second favorite because it is fun plugging and returning the numbers in order to obtain a certain value.");
+    console.log("Strings are my third favorite because you are able put almost anything inside a string and able to manipulate or store it to your advantage.");
+}
+
+Data();
 
 /************************************************************* */
 //Bonus assignments:
@@ -125,5 +266,20 @@ if (age > 65) console.log("retired"); else {
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.  
 
 //your code...
+
+function stockGain(basis, yrs)
+{
+    var message = ' is how much the stock has increased.';
+    function inner(yrs)
+    {
+        var r = 0.05;
+        console.log((basis * (yrs * r)) + message);
+        return (basis * (yrs * r));
+    }
+    return basis + inner(yrs);
+}
+
+var futureValue = stockGain(500, 5);
+console.log("Future value = " + futureValue);
 
 
